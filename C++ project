@@ -1,0 +1,83 @@
+#include <iostream>
+#include<Windows.h>
+using namespace std;
+void system()
+{
+	cout << "\n";
+	cout << "------------------------------------------------------------------------------------------- Welcome to Al Damietta Restaurant ------------------------------------------------------------------------------------\n";
+
+	int order;
+	cout << "Your order ( 1-delivery , 2-in restaurant) ? \n";
+	cin >> order;
+	cout << " 1 = 3,5,7,9,11.... || 2 = 0,4,6,8,10.... \n";
+	if (order == '1' || '2')
+	{
+		cout << " (Please write only one name) \n";
+		string Name;
+		cout << " Your order name : ";
+		cin >> Name;
+		cout << endl;
+		Sleep(500);
+		cout << "********************** The menu ***********************\n";
+		cout << "**** pasta ****                    **** sandwiches ****\n";
+		cout << "1-Pasta with cheese                2-cheese sandwich \n";
+		cout << "3-pasta-with salt                  4-potato-sandwich \n";
+		cout << "5-pasta with meat                  6-Meat sandwich \n";
+		cout << "7-pasta with chicken               8-chicken sandwich \n";
+		int x;
+		cout << "How many order do you need ? \n";
+		cin >> x;
+		cout << "Enter your " << x << " order\n";
+		int y;
+		for (int i = 1; i <= x; i++)
+		{
+			cout << "The " << i << " order number is : ";
+			cin >> y;
+		}
+		Sleep(2500);
+		cout << "\t\t\tyour number of order :" << rand(); 20 % 15;
+		cout << endl;
+		Sleep(1400);
+		cout << "Please again , the number of your request is : " << x << " \n";
+		int min = 0;
+		int sec = 0;
+		Sleep(600);
+		cout << "you need it after ";
+		cout << "min : ";
+		cin >> min;
+
+		cout << "sec : ";
+		cin >> sec;
+		while (true)
+		{
+			system("cls");
+			if (sec < 0)
+			{
+				min--;
+				sec = 59;
+				if ( min < 0)
+				{
+					cout << " order " << Name << " is finished :) \n";
+					Sleep(2500);
+					cout << " Sorry, there is no delivery-here :( \n";
+					Sleep(1500);
+					cout << "Good luck ";
+					Sleep(80000);
+				}
+
+			}
+			cout << min << ":" << sec;
+			sec--;
+			Sleep(1000);
+
+		}
+
+	}
+}
+int main()
+{
+
+
+	system();
+
+}
